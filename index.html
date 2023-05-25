@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>КТ 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="df jcc pt50">
+        <div class="df fdc">
+            <div id="iform">
+                <form id="card">
+                    <input type="text" name="bank" placeholder="Название банка" required>
+                    <input type="text" name="holder" placeholder="Имя держателя карты" required>
+                    <input type="tel" name="card" inputmode="numeric" pattern="^\d{16}$" required placeholder="Номер карты (16 цифр)">
+                    <input type="text" name="expiration" pattern="^[\d]{2}\/[\d]{2}$" placeholder="09/26" required>
+                    <select name="payment" required>
+                        <option value="" selected disabled hidden>Платежная система</option>
+                        <option>VISA</option>
+                        <option>MasterCard</option>
+                        <option>МИР</option>
+                    </select>
+                    <button type="submit" class="db">Отправить</button>
+                </form>
+            </div>
+
+            <div id="icard">
+                <div id="card_number" class="pa"></div>
+                <div id="card_holder" class="pa"></div>
+                <div id="card_expiration" class="pa"></div>
+                <img id="card_bank" class="db pa" src="" alt="">
+                <img id="card_payment" class="db w100 pa" src="" alt="">
+                <img id="card_emv" class="db pa" src="https://i.imgur.com/c02ruXg.png" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="itable" class="df jcc pt50">
+        <table>
+            <thead>
+                <tr>
+                    <th>Банк</th>
+                    <th>Держатель</th>
+                    <th>Карта</th>
+                    <th>Действительна</th>
+                    <th>Платёжная система</th>
+                </tr>
+            </thead>
+            <!-- <tr>
+                <td>ВТБ</td>
+                <td>Имя Отчество</td>
+                <td>1234567890123456</td>
+                <td>12/26</td>
+                <td>Visa</td>
+            </tr> -->
+        </table>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
